@@ -3,99 +3,139 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Pitch académico Energía para avanzar: propuesta de bienestar y patinaje de base con Alpina y Jhon Edwar Tascón.">
+  <meta name="description" content="Propuesta académica de alianza entre Alpina y el patinador Jhon Edwar Tascón Holguín: Energía para avanzar.">
   <meta name="theme-color" content="#0033a0">
-  <title>Energía para avanzar | Alpina × Jhon Edwar Tascón</title>
+  <title>Energía para avanzar | Alpina × Fedepatín</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
   <style>
-    :root { color-scheme: light; --blue: #0033a0; --yellow: #ffd500; --ink: #17233c; --muted: #59677f; --paper: #f5f8fc; }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Open Sans", sans-serif; }
-    .site-header { position: sticky; top: 0; z-index: 2; background: #fff; box-shadow: 0 4px 20px #001c5112; }
-    .nav-wrap { width: min(1120px, calc(100% - 40px)); min-height: 76px; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-    .brand { display: flex; align-items: center; gap: 12px; color: var(--blue); text-decoration: none; font: 800 14px Montserrat, sans-serif; letter-spacing: .06em; }
-    .brand-mark { width: 10px; height: 34px; border-radius: 8px; background: var(--yellow); }
-    nav { display: flex; align-items: center; gap: 24px; }
-    nav a { color: var(--ink); font-size: 13px; font-weight: 700; text-decoration: none; }
-    nav a:hover, nav a:focus-visible { color: var(--blue); }
-    .hero { padding: clamp(58px, 10vw, 112px) 20px 70px; color: #fff; background: linear-gradient(120deg, #0033a0, #0755bd 70%, #1769d1); }
-    .hero-inner { width: min(960px, 100%); margin: auto; }
-    .eyebrow { margin: 0 0 14px; color: var(--yellow); font: 700 12px Montserrat, sans-serif; letter-spacing: .14em; text-transform: uppercase; }
-    h1 { max-width: 760px; margin: 0; font: 800 clamp(42px, 8vw, 82px)/1.02 Montserrat, sans-serif; letter-spacing: -.05em; }
-    h1 span { color: var(--yellow); }
-    .hero-lead { max-width: 700px; margin: 24px 0 0; color: #e7efff; font-size: clamp(17px, 2.4vw, 21px); line-height: 1.7; }
-    .hero-tag { display: inline-flex; margin-top: 30px; padding: 10px 14px; border: 1px solid #ffffff55; border-radius: 999px; color: #fff; font-size: 13px; }
-    .section { padding: 76px 20px; }
-    .container { width: min(960px, 100%); margin: auto; }
-    .section-heading { margin: 0 0 30px; }
-    .section-heading .eyebrow { color: var(--blue); }
-    h2 { margin: 0; color: var(--blue); font: 800 clamp(28px, 5vw, 42px)/1.15 Montserrat, sans-serif; letter-spacing: -.03em; }
-    .pitch-card { display: grid; gap: 20px; padding: clamp(24px, 5vw, 48px); border-radius: 22px; background: #fff; box-shadow: 0 16px 50px #001c5110; }
-    .pitch-card p { margin: 0; color: var(--muted); font-size: clamp(16px, 2vw, 18px); line-height: 1.85; }
-    .pitch-card p:first-child { color: var(--ink); font-size: clamp(17px, 2.3vw, 20px); }
-    .closing { margin-top: 28px !important; padding: 18px 22px; border-left: 4px solid var(--yellow); border-radius: 0 12px 12px 0; background: #f3f7ff; color: var(--blue) !important; font: 700 18px/1.6 Montserrat, sans-serif; }
-    .academic-note { margin: 20px 0 0; color: #78849a; font-size: 12px; line-height: 1.7; }
-    .contact-section { background: #eaf1fb; }
-    .contact-card { margin-top: 28px; padding: clamp(24px, 4vw, 36px); border-radius: 20px; background: #fff; }
-    .contact-card h3 { margin: 0 0 18px; color: var(--blue); font: 700 20px Montserrat, sans-serif; }
-    .contact-list { display: grid; grid-template-columns: max-content 1fr; gap: 12px 22px; margin: 0; font-size: 15px; line-height: 1.6; }
+    .pitch-section { background: var(--blue-dark); color: var(--white); }
+    .pitch-section .section-heading h2 { color: var(--white); }
+    .pitch-section .section-heading .eyebrow { color: var(--yellow); }
+    .pitch-copy { max-width: 900px; margin: auto; padding: clamp(24px, 5vw, 48px); border: 1px solid rgba(255,255,255,.16); border-radius: var(--radius); background: rgba(255,255,255,.06); }
+    .pitch-copy p { margin: 0 0 20px; color: rgba(255,255,255,.84); font-size: 15px; line-height: 1.9; }
+    .pitch-copy p:first-child { color: #fff; font-size: 17px; }
+    .pitch-copy p:last-child { margin-bottom: 0; }
+    .contact-card { max-width: 800px; margin: 30px auto 0; padding: 28px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); box-shadow: var(--shadow); }
+    .contact-card h3 { margin-bottom: 18px; color: var(--blue); font-size: 20px; }
+    .contact-list { display: grid; grid-template-columns: max-content 1fr; gap: 10px 20px; margin: 0; }
     .contact-list dt { color: var(--muted); font-weight: 700; }
     .contact-list dd { margin: 0; overflow-wrap: anywhere; }
-    .contact-list a { color: var(--blue); text-underline-offset: 3px; }
-    footer { padding: 26px 20px; background: #09265e; color: #dce7ff; font-size: 13px; }
-    .footer-inner { width: min(960px, 100%); margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 14px; }
-    footer p { margin: 0; }
-    @media (max-width: 620px) { .nav-wrap { width: calc(100% - 28px); min-height: 66px; } nav { gap: 14px; } nav a { font-size: 12px; } nav a:first-child { display: none; } .section { padding: 58px 16px; } .contact-list { grid-template-columns: 1fr; gap: 3px; } .contact-list dd { margin-bottom: 10px; } .footer-inner { align-items: flex-start; flex-direction: column; } }
+    .contact-list a { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
+    @media (max-width: 580px) { .pitch-copy p { font-size: 13px; } .contact-list { grid-template-columns: 1fr; gap: 3px; } .contact-list dd { margin-bottom: 10px; } }
   </style>
 </head>
 <body>
   <header class="site-header">
     <div class="nav-wrap">
-      <a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true"></span> ALPINA × JHON EDWAR TASCÓN</a>
-      <nav aria-label="Navegación principal"><a href="#propuesta">Pitch</a><a href="#contacto">Contacto</a></nav>
+      <a class="brand" href="#inicio" aria-label="Alpina por Fedepatín, inicio">
+        <img src="LOGO ALPINA.png" alt="" class="brand-mark">
+        <span class="brand-copy"><strong>ALPINA <span>×</span> FEDEPATÍN</strong><small>Pitch de Marca</small></span>
+      </a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#resumen">Resumen</a><a href="#marca">Marca</a><a href="#embajador">Embajador</a><a href="#proposito">Propósito</a><a href="#activacion">Activación</a><a href="#patrocinadores">Patrocinadores</a><a href="#guion">Pitch</a><a href="#contacto">Contacto</a>
+      </nav>
     </div>
   </header>
   <main>
-    <section class="hero" id="inicio" aria-labelledby="page-title">
-      <div class="hero-inner">
-        <p class="eyebrow">Propuesta académica · Marketing deportivo</p>
-        <h1 id="page-title">Energía para <span>avanzar.</span></h1>
-        <p class="hero-lead">Una propuesta para unir el liderazgo nutricional de Alpina con la trayectoria de Jhon Edwar Tascón y acercar el bienestar y el patinaje a las familias.</p>
-        <span class="hero-tag">Pitch de marca · Ejercicio académico por validar</span>
+    <section class="hero section-shell" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <p class="eyebrow"><span class="status-dot"></span> Ejercicio académico · Propuesta por validar</p>
+        <p class="hero-kicker">Una alianza para acompañar cada vuelta</p>
+        <h1 id="hero-title">Energía para <span>avanzar.</span></h1>
+        <p class="hero-description">Una propuesta para unir el liderazgo nutricional de <strong>Alpina</strong> con la trayectoria de <strong>Jhon Edwar Tascón</strong>, e impulsar el bienestar cotidiano y el patinaje formativo.</p>
+        <a class="button button-primary" href="#resumen">Conoce la propuesta <span aria-hidden="true">↓</span></a>
+        <div class="hero-proof"><span class="proof-icon" aria-hidden="true">∞</span><span><strong>Constancia</strong><small>Años de disciplina y apoyo familiar</small></span></div>
       </div>
+      <div class="hero-visual"><div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div><img class="hero-athlete" src="JHON TASCON 3.jpeg" alt="Jhon Edwar Tascón con uniforme de patinaje y medalla"><div class="photo-caption"><span class="caption-line"></span><span>Velocidad que inspira<br><strong>Colombia sobre ruedas</strong></span></div><div class="hero-tag"><span>01</span> Propuesta de alianza</div></div>
+      <div class="hero-bottom-line" aria-hidden="true"><span></span></div>
     </section>
-    <section class="section" id="propuesta" aria-labelledby="pitch-title">
-      <div class="container">
-        <div class="section-heading"><p class="eyebrow">La propuesta</p><h2 id="pitch-title">Del propósito a la pista.</h2></div>
-        <article class="pitch-card">
-          <p>En el patinaje, una carrera se define por milésimas, pero el verdadero triunfo se construye durante años de disciplina y apoyo familiar. Por eso, hoy traemos una propuesta concreta: unir el liderazgo nutricional de Alpina con la trayectoria de Jhon Edwar Tascón bajo un mismo propósito: Energía para avanzar.</p>
-          <p>No estamos planteando un patrocinio tradicional centrado únicamente en el podio. Queremos conectar a Alpina con el bienestar cotidiano de las familias, convirtiendo la constancia de Jhon en un puente real de nutrición responsable y comunidad, empezando desde los clubes formativos.</p>
-          <p>¿Cómo lo hacemos realidad? A través de tres frentes de acción claros: realizaremos encuentros recreativos en clubes y colegios, crearemos historias digitales contadas desde la voz del propio atleta y entregaremos guías educativas con respaldo profesional para acompañar a los padres en el proceso deportivo de sus hijos.</p>
-          <p>Este proyecto académico ya tiene la estrategia lista para pasar del papel a la pista. El siguiente paso es sentarnos a validar los datos deportivos, los permisos y la afinidad de marca para estructurar juntos un primer piloto en un club local. Dejemos de imaginar el impacto y empecemos a impulsar a quienes avanzan cada día.</p>
-          <p class="closing">Alpina y el patinaje de base: energía para avanzar.</p>
-        </article>
-        <p class="academic-note">Propuesta académica. La ejecución, las cifras deportivas, los permisos y los avales quedan sujetos a validación y aprobación. No implica un acuerdo o patrocinio vigente.</p>
+
+    <section class="section section-light" id="resumen" aria-labelledby="summary-title"><div class="container">
+      <div class="section-heading"><p class="eyebrow">01 / La idea</p><h2 id="summary-title">Una marca que se mueve <span>con propósito.</span></h2><p>Unimos nutrición, disciplina y comunidad para que el deporte no se viva solo en la línea de meta.</p></div>
+      <div class="academic-note"><span class="note-mark" aria-hidden="true">i</span><p><strong>Nota académica:</strong> Esta propuesta es un ejercicio académico. No existe compromiso comercial previo ni se afirma una alianza oficial con Alpina, Fedepatín o el deportista.</p></div>
+      <div class="pillar-grid">
+        <article class="pillar-card"><span class="card-number">01</span><div class="pillar-icon" aria-hidden="true">✳</div><h3>Marca</h3><p>Alpina acompaña el esfuerzo diario desde una relación cercana con las familias y el bienestar.</p><a href="#marca">Explorar <span aria-hidden="true">↗</span></a></article>
+        <article class="pillar-card"><span class="card-number">02</span><div class="pillar-icon skate-icon" aria-hidden="true">◉</div><h3>Embajador</h3><p>La historia de Jhon Edwar Tascón conecta el alto rendimiento con el valor de insistir.</p><a href="#embajador">Explorar <span aria-hidden="true">↗</span></a></article>
+        <article class="pillar-card"><span class="card-number">03</span><div class="pillar-icon purpose-icon" aria-hidden="true">↗</div><h3>Propósito</h3><p>Más oportunidades para acercar la nutrición, el movimiento y el patinaje a nuevas generaciones.</p><a href="#proposito">Explorar <span aria-hidden="true">↗</span></a></article>
       </div>
-    </section>
-    <section class="section contact-section" id="contacto" aria-labelledby="contact-title">
-      <div class="container">
-        <div class="section-heading"><p class="eyebrow">Datos académicos</p><h2 id="contact-title">Contacto</h2></div>
-        <div class="contact-card">
-          <h3>Zury Daniela Duran Cortes</h3>
-          <dl class="contact-list">
-            <dt>Correo</dt><dd><a href="mailto:zduran@endeporte.edu.co">zduran@endeporte.edu.co</a></dd>
-            <dt>Teléfono</dt><dd><a href="tel:+573234443796">323 444 3796</a></dd>
-            <dt>Carrera</dt><dd>Mercadeo y Negocios Internacionales</dd>
-            <dt>Semestre</dt><dd>Sexto semestre</dd>
-            <dt>Materia</dt><dd>Marketing Deportivo</dd>
-          </dl>
+    </div></section>
+
+    <section class="section section-white" id="marca" aria-labelledby="brand-title"><div class="container">
+      <div class="section-heading section-heading-row"><div><p class="eyebrow">02 / Marca · Alpina</p><h2 id="brand-title">El bienestar también <span>se entrena.</span></h2></div><p>Una plataforma cercana, pensada para las rutinas reales de deportistas y familias colombianas.</p></div>
+      <div class="brand-layout"><div class="brand-photo"><img src="EMPRESA ALPINA.jpg" alt="Sede de Alpina en un entorno natural"><div class="brand-photo-label"><img src="LOGO ALPINA.png" alt="Alpina"><span>Nutrición que acompaña<br>cada día.</span></div></div>
+        <div class="brand-details">
+          <div class="detail-row"><span class="detail-index">01</span><div><h3>Promesa de valor</h3><p>Acompañar el esfuerzo diario de las familias colombianas con una mirada de bienestar.</p></div></div>
+          <div class="detail-row"><span class="detail-index">02</span><div><h3>Identidad</h3><p>Cercana, familiar y comprometida con el bienestar cotidiano, no solo con la competencia.</p></div></div>
+          <div class="detail-row"><span class="detail-index">03</span><div><h3>Posicionamiento propuesto</h3><p>Una marca que acompaña el bienestar de deportistas y familias.</p></div></div>
+          <div class="detail-row"><span class="detail-index">04</span><div><h3>Público</h3><p>Familias de patinadores, clubes, colegios y jóvenes interesados en el deporte.</p></div></div>
+          <div class="slogan-box"><span>El mensaje</span><strong>“Energía para avanzar”</strong><span class="slogan-spark" aria-hidden="true">✳</span></div>
+          <p class="validation-note"><span aria-hidden="true">!</span> Por validar: coherencia con la comunicación real de Alpina y revisión profesional de los contenidos nutricionales.</p>
         </div>
       </div>
-    </section>
+    </div></section>
+
+    <section class="section section-blue" id="embajador" aria-labelledby="athlete-title"><div class="container">
+      <div class="section-heading section-heading-inverse"><p class="eyebrow">03 / Embajador propuesto</p><h2 id="athlete-title">Jhon Edwar Tascón <span>Holguín.</span></h2><p>Una trayectoria de velocidad, carácter y perseverancia que puede inspirar a nuevas generaciones.</p></div>
+      <div class="athlete-profile"><div class="athlete-portrait"><img src="JHON TASCON.jpeg" alt="Jhon Edwar Tascón con medallas de competencia"><div class="portrait-label"><span>Selección Colombia</span><strong>Patinaje de velocidad</strong></div></div>
+        <div class="timeline">
+          <article class="timeline-item"><span class="timeline-year">2026</span><div class="timeline-content"><p class="timeline-label">Mundial · Asunción</p><h3>Podios para Colombia</h3><ul><li><span class="medal bronze">●</span> Bronce en 200 m meta contra meta mayores.</li><li><span class="medal silver">●</span> Plata en relevo 3.000 m senior varones.</li></ul></div></article>
+          <article class="timeline-item"><span class="timeline-year">2026</span><div class="timeline-content"><p class="timeline-label">Juegos Suramericanos · Santa Fe</p><h3>El oro se decidió en milésimas</h3><ul><li><span class="medal gold">●</span> Oro en 1.000 m sprint pista.</li><li><span class="medal silver">●</span> Plata en 200 m.</li></ul></div></article>
+          <article class="timeline-item"><span class="timeline-year">Trayectoria</span><div class="timeline-content"><p class="timeline-label">Deporte de alto rendimiento</p><h3>Disciplina que inspira</h3><p>Su recorrido deportivo representa constancia, trabajo y apoyo familiar.</p></div></article>
+          <p class="data-caveat">Los datos deportivos específicos deben confirmarse con fuentes oficiales antes de su uso público.</p>
+        </div>
+      </div>
+      <div class="athlete-video"><h3>La historia de Jhon Tascón</h3><div class="athlete-video-frame"><iframe src="https://www.youtube-nocookie.com/embed/zyWE4ebDzCI" title="La historia de Jhon Tascón en YouTube" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><a class="athlete-video-link" href="https://youtu.be/zyWE4ebDzCI" target="_blank" rel="noopener noreferrer">Ver en YouTube <span aria-hidden="true">↗</span></a></div>
+    </div></section>
+
+    <section class="section section-light" id="proposito" aria-labelledby="purpose-title"><div class="container purpose-layout">
+      <div class="purpose-copy"><p class="eyebrow">04 / Propósito</p><h2 id="purpose-title">Cada kilómetro<br>abre <span>un camino.</span></h2><p class="purpose-intro">“Energía para avanzar” lleva el deporte más allá del podio: acompaña hábitos saludables y crea espacios donde niñas, niños y jóvenes puedan descubrir lo que son capaces de lograr.</p><div class="purpose-quote"><span class="quote-mark" aria-hidden="true">“</span><p>La meta no es solo llegar primero. Es que más personas puedan empezar.</p></div></div>
+      <div class="purpose-visual"><img src="COLEGIO.jpg" alt="Espacio educativo y comunitario"><div class="purpose-stat"><strong>Más</strong><span>movimiento<br>en comunidad</span><i aria-hidden="true">↗</i></div></div>
+      <div class="purpose-pillars"><article><span>01</span><h3>Nutrición consciente</h3><p>Conversaciones educativas con acompañamiento profesional, sin promesas de rendimiento no demostradas.</p></article><article><span>02</span><h3>Deporte accesible</h3><p>Acercar experiencias de patinaje a clubes, colegios y familias.</p></article><article><span>03</span><h3>Inspiración cotidiana</h3><p>Celebrar la constancia, el trabajo en equipo y cada avance dentro y fuera de la pista.</p></article></div>
+    </div></section>
+
+    <section class="section section-white activation-section" id="activacion" aria-labelledby="activation-title"><div class="container">
+      <div class="section-heading section-heading-row"><div><p class="eyebrow">05 / Activación propuesta</p><h2 id="activation-title">Del mensaje <span>a la pista.</span></h2></div><p>Tres frentes para convertir la propuesta en experiencias relevantes.</p></div>
+      <div class="activation-grid">
+        <article class="activation-card activation-feature"><div class="activation-image"><img src="JHON TASCON  2.jpeg" alt="Patinador colombiano en la pista"><span>Experiencia de marca</span></div><div class="activation-body"><span class="step-label">ACTIVACIÓN 01</span><h3>Encuentros que nos unen</h3><p>Encuentros recreativos en clubes y colegios, con el atleta y una conversación sobre bienestar.</p><ul class="tag-list"><li>Clubes</li><li>Colegios</li><li>Familias</li></ul></div></article>
+        <article class="activation-card"><div class="activation-symbol" aria-hidden="true">↗</div><span class="step-label">ACTIVACIÓN 02</span><h3>Historias que avanzan</h3><p>Historias digitales contadas desde la voz del atleta sobre preparación, disciplina y apoyo.</p><span class="activation-channel">Contenido social · Video vertical</span></article>
+        <article class="activation-card"><div class="activation-symbol activation-yellow" aria-hidden="true">✳</div><span class="step-label">ACTIVACIÓN 03</span><h3>Guías para las familias</h3><p>Recursos educativos sobre el proceso deportivo de sus hijos, con respaldo profesional.</p><span class="activation-channel">Guía descargable · Taller</span></article>
+      </div>
+      <div class="measurement-bar"><div><span class="measure-icon" aria-hidden="true">◎</span><p><strong>¿Cómo medimos?</strong><br>Asistencia, participación, alcance y recordación; las metas se definirán con los aliados.</p></div><span class="measure-arrow" aria-hidden="true">→</span><p class="measure-footnote">La ejecución, presupuesto, permisos de imagen, disponibilidad del deportista y avales quedan sujetos a aprobación.</p></div>
+    </div></section>
+
+    <section class="section section-light" id="patrocinadores" aria-labelledby="partners-title"><div class="container">
+      <div class="section-heading centered-heading"><p class="eyebrow">06 / Ecosistema de aliados</p><h2 id="partners-title">Avanzar es <span>un trabajo en equipo.</span></h2><p>Aliados propuestos, sujetos a conversaciones y aprobaciones institucionales.</p></div>
+      <div class="partner-board"><div class="partner-main"><span class="partner-role">Marca propuesta</span><img src="LOGO ALPINA.png" alt="Logo Alpina"><strong>ALPINA</strong><small>Nutrición y bienestar</small><a class="partner-social" href="https://www.instagram.com/alpina/?hl=es" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div><span class="partner-plus" aria-hidden="true">×</span><div class="partner-main partner-fedepatin"><span class="partner-role">Entorno deportivo</span><div class="federation-mark" aria-hidden="true">F</div><strong>FEDEPATÍN</strong><small>Marco institucional por validar</small><a class="partner-social" href="https://fedepatin.org.co/" target="_blank" rel="noopener noreferrer">Página oficial ↗</a></div><span class="partner-plus partner-plus-yellow" aria-hidden="true">+</span><div class="partner-main partner-athlete"><span class="partner-role">Embajador propuesto</span><img src="JHON TASCON.jpeg" alt="Retrato de Jhon Edwar Tascón"><strong>JHON E. TASCÓN</strong><small>Atleta · sujeto a confirmación</small><a class="partner-social" href="https://www.instagram.com/jhon_tascon_h/?hl=es" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div></div>
+      <p class="partners-disclaimer">Logos y nombres se presentan con fines académicos y de identificación. No implican patrocinio, representación ni autorización de uso comercial.</p>
+    </div></section>
+
+    <section class="section script-section" id="guion" aria-labelledby="script-title"><div class="container script-layout">
+      <div class="script-intro"><p class="eyebrow eyebrow-light">07 / Pitch</p><h2 id="script-title">La propuesta.<br><span>En palabras.</span></h2><p>Una invitación a impulsar a quienes avanzan cada día.</p><div class="script-time"><span aria-hidden="true">◷</span> Presentación</div></div>
+      <div class="script-content">
+        <article class="script-part"><span>01 / Contexto</span><div><h3>Disciplina y apoyo</h3><p>En el patinaje, una carrera se define por milésimas, pero el verdadero triunfo se construye durante años de disciplina y apoyo familiar. Por eso, hoy traemos una propuesta concreta: unir el liderazgo nutricional de Alpina con la trayectoria de Jhon Edwar Tascón bajo un mismo propósito: Energía para avanzar.</p></div></article>
+        <article class="script-part"><span>02 / Conexión</span><div><h3>Bienestar cotidiano</h3><p>No estamos planteando un patrocinio tradicional centrado únicamente en el podio. Queremos conectar a Alpina con el bienestar cotidiano de las familias, convirtiendo la constancia de Jhon en un puente real de nutrición responsable y comunidad, empezando desde los clubes formativos.</p></div></article>
+        <article class="script-part"><span>03 / Acción</span><div><h3>Tres frentes de trabajo</h3><p>¿Cómo lo hacemos realidad? A través de tres frentes de acción claros: realizaremos encuentros recreativos en clubes y colegios, crearemos historias digitales contadas desde la voz del propio atleta y entregaremos guías educativas con respaldo profesional para acompañar a los padres en el proceso deportivo de sus hijos.</p></div></article>
+        <article class="script-part"><span>04 / Próximo paso</span><div><h3>Del papel a la pista</h3><p>Este proyecto académico ya tiene la estrategia lista para pasar del papel a la pista. El siguiente paso es sentarnos a validar los datos deportivos, los permisos y la afinidad de marca para estructurar juntos un primer piloto en un club local. Dejemos de imaginar el impacto y empecemos a impulsar a quienes avanzan cada día.</p></div></article>
+        <p class="script-disclaimer">Propuesta académica. Verificar los datos y obtener permisos y avales antes de su uso público.</p>
+      </div>
+    </div></section>
+
+    <section class="section section-light" id="contacto" aria-labelledby="contact-title"><div class="container">
+      <div class="section-heading centered-heading"><p class="eyebrow">08 / Información académica</p><h2 id="contact-title">Contacto</h2><p>Responsable de la propuesta académica.</p></div>
+      <div class="contact-card"><h3>Zury Daniela Duran Cortes</h3><dl class="contact-list"><dt>Correo</dt><dd><a href="mailto:zduran@endeporte.edu.co">zduran@endeporte.edu.co</a></dd><dt>Teléfono</dt><dd><a href="tel:+573234443796">323 444 3796</a></dd><dt>Carrera</dt><dd>Mercadeo y Negocios Internacionales</dd><dt>Semestre</dt><dd>Sexto semestre</dd><dt>Materia</dt><dd>Marketing Deportivo</dd></dl></div>
+    </div></section>
   </main>
-  <footer><div class="footer-inner"><p>Propuesta académica · Marketing Deportivo</p><p>Alpina × Jhon Edwar Tascón</p></div></footer>
+  <footer class="site-footer"><div class="container footer-inner"><a class="footer-brand" href="#inicio">ALPINA <span>×</span> FEDEPATÍN</a><p>Propuesta académica · Marketing Deportivo</p><a href="#inicio" class="back-top">Volver arriba ↑</a></div></footer>
+  <script>
+    if (window.location.protocol === "file:") {
+      const frame = document.querySelector(".athlete-video-frame");
+      const link = document.querySelector(".athlete-video-link");
+      if (frame) frame.hidden = true;
+      if (link) link.textContent = "Para ver el reproductor en la página, abre el sitio con un servidor local. Ver en YouTube ↗";
+    }
+  </script>
 </body>
 </html>
